@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package analyzer;
+
+option go_package = "config_analyzer/grpc/pb";
+
+service AnalyzeService {
+    rpc Analyze (AnalyzeRequest) returns (AnalyzeResponse);
+}
+
+message AnalyzeRequest{
+    bytes config = 1;
+}
+
+message Problem {
+    string severity = 1;
+    string message = 2;
+    string recommendation = 3;
+}
+
+message AnalyzeResponse {
+    repeated Problem problems = 1;
+}

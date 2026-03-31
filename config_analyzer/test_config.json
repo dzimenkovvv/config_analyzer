@@ -1,0 +1,9 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "paSSworD": "123123qwerty",
+    "tls" : false,
+    "digest-algorithm": "MD5",
+    "level": "debug"
+  }
+}
